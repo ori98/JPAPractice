@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+        version="2.1">
+        
+        <persistence-unit name="myApp">
+
+        	<properties>
+        		<!-- Note that the value for the below properties have been overridden in main function -->
+        		<property name="javax.persistence.jdbc.url" value="jdbc_url"/>
+        		<property name="javax.persistence.jdbc.user" value="jdbc_username"/>
+        		<property name="javax.persistence.jdbc.password" value="jdbc_password"/>
+        		<property name="javax.persistence.jdbc.driver" value="jdbc_driver"/>
+        		
+        		<property name="hibernate.show_sql" value="true"/>
+        		<property name="hibernate.format_sql" value="true"/> <!-- these two statements show SQL statements so that Hibernate can generate apt commands for MySQL -->
+        		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect"/>
+        		<!-- <property name="hibernate.hbm2ddl.auto" value="create-drop"/> --> <!-- used to drop table if it exists -->
+        		<property name = "hibernate.hbm2ddl.auto" value="create-drop"/><!-- to keep the data -->
+        	</properties>
+        
+        </persistence-unit>
+
+</persistence>
