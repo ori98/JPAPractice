@@ -19,7 +19,7 @@
         		<property name="hibernate.format_sql" value="true"/> <!-- these two statements show SQL statements so that Hibernate can generate apt commands for MySQL -->
         		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect"/>
         		<!-- <property name="hibernate.hbm2ddl.auto" value="create-drop"/> --> <!-- used to drop table if it exists -->
-        		<property name = "hibernate.hbm2ddl.auto" value="create-drop"/><!-- to keep the data -->
+        		<property name = "hibernate.hbm2ddl.auto" value="update"/><!-- to keep the data -->
         	</properties>
         
         </persistence-unit>
